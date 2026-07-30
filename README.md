@@ -1,24 +1,24 @@
-# 🔍 Statista Data Quality Audit Engine
+# 🔍 Data Quality Audit Engine
 
 **Author:** Anjali Parihar  
-**Purpose:** Automated data quality checks for company financial data  
+**Purpose:** Automated data quality checks for the data 
 **Tech Stack:** Python · Pandas · Streamlit · OpenPyXL
 
 ---
 
 ## 📋 What This Does
 
-Automatically checks company financial data across **3 quality dimensions:**
+Automatically checks company data across **3 quality dimensions:**
 
 | Dimension | What It Checks |
 |---|---|
-| ✅ Completeness | Missing required fields (Revenue, Currency, Company Name) |
+| ✅ Completeness | Missing required fields  |
 | 🔄 Consistency | Revenue/unit mismatches, fiscal period format issues |
 | ⚠️ Validity | Negative revenue, statistical outliers, extreme YoY changes |
 
 ---
 
-## 🚀 How To Run — 3 Simple Steps
+## 🚀 How To Run — Follow the steps below
 
 ### Step 1 — Install Python
 Download Python 3.10+ from https://python.org/downloads
@@ -50,32 +50,18 @@ statista_quality_app/
 ├── README.md               ← This file
 ├── run_app.bat             ← Windows one-click launcher
 ├── run_app.sh              ← Mac/Linux one-click launcher
-└── sample_data/
+└── dataset/
     └── CaseStudy_Quality_sample25_1.xlsx  ← Sample input file
 ```
 
 ---
 
-## 📥 Input
-Any Excel file (.xlsx) with these columns:
-- `companynameofficial`
-- `REVENUE`
-- `unit_REVENUE`
-- `fiscalperiodend`
-- `industrycode`
-- `timevalue`
-- `providerkey`
 
-## 📤 Output
-Excel file with 3 sheets:
-- **Full Dataset** — all records with quality flags
-- **Issues Only** — only flagged records
-- **Quality Summary** — summary table for Power BI
 
 ---
 
 ## 🔧 Reuse For Any Dataset
-This tool works with ANY financial dataset — not just Statista.
+This tool works with ANY financial dataset.
 Just upload your Excel file and it runs automatically.
 
 ---
