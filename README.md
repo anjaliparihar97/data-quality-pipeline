@@ -1,8 +1,8 @@
-# 🔍 Data Quality Audit Engine
+# Data Quality Audit Engine
 
 **Author:** Anjali Parihar  
 **Purpose:** Automated data quality checks for the data 
-**Tech Stack:** Python · Pandas · Streamlit · OpenPyXL
+**Tech Stack:** Python · Pandas · Streamlit · OpenPyXL . PowerBI
 
 ---
 
@@ -30,7 +30,7 @@ Open Terminal (Mac/Linux) or Command Prompt (Windows) and run:
 pip install -r requirements.txt
 ```
 
-### Step 3 — Launch the app
+### Step 3 — Launch the app with teh following command
 ```
 streamlit run app.py
 ```
@@ -42,16 +42,27 @@ The app opens automatically in your browser at http://localhost:8501
 ## 📁 Project Structure
 
 ```
-statista_quality_app/
+## 📁 Repository Structure
+
+```text
+data-quality-pipeline/
 │
-├── app.py                  ← Main Streamlit application
-├── quality_checks.py       ← Core quality check functions (reusable)
-├── requirements.txt        ← Python dependencies
-├── README.md               ← This file
-├── run_app.bat             ← Windows one-click launcher
-├── run_app.sh              ← Mac/Linux one-click launcher
-└── dataset/
-    └── CaseStudy_Quality_sample25_1.xlsx  ← Sample input file
+├── Dataset/                                 # Raw input data directory
+│   ├── CaseStudy_Quality_sample25_1.xlsx    # Original extraction file
+│                         
+├── Output/                                  # Pipeline output directory
+│   ├── flagged_CaseStudy_Quality_sample25 1.xlsx # Processed Excel dataset with flags and the issues encountered
+│   
+│
+├── PowerBI_File/                            # PowerBI Report with the issues encountered
+│   └── QualityDimentionsOfCaseStudy.pbix
+│
+├── app.py                                   # Interactive Streamlit Web Application UI
+├── quality_checks.py                        # Automated Quality Dimension Engine
+├── requirements.txt                         # Project dependencies list
+├── run_app.bat                              # 1-Click launcher script (Windows)
+├── run_app.sh                               # 1-Click launcher script (macOS/Linux)
+└── README.md                                # Executive project documentation
 ```
 
 ---
@@ -61,8 +72,8 @@ statista_quality_app/
 ---
 
 ## 🔧 Reuse For Any Dataset
-This tool works with ANY financial dataset.
-Just upload your Excel file and it runs automatically.
+This tool works with any financial dataset with the features.
+Just upload your Excel file and it runs the quality check automatically.
 
 ---
 
